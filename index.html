@@ -402,7 +402,7 @@ const PRODUCTS_TEXT = [
      * STATE
      ***********************/
     const sessionId = (crypto.randomUUID ? crypto.randomUUID() : String(Date.now()) + "_" + Math.random().toString(16).slice(2));
-    const condition = "horizontal"; // randomize here (single-link flow) (Math.random() < 0.5) ? "horizontal" : "vertical"
+    const condition = (Math.random() < 0.5) ? "horizontal" : "vertical"; // randomize here (single-link flow)  "vertical" "horizontal"
     const comparability = (Math.random() < 0.5) ? "numeric" : "text";
 
     
