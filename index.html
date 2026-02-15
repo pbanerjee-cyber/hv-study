@@ -373,7 +373,7 @@ const PRODUCTS_TEXT = [
 ];
 
 
-const PRODUCTS = (comparability === "numeric") ? PRODUCTS_NUMERIC : PRODUCTS_TEXT;
+
 
 
   /***********************
@@ -558,6 +558,11 @@ function cardHTML(p) {
 
 function renderStimuli() {
   t_stimuli_shown_ms = nowMs();
+
+  // choose stimuli based on condition
+  const PRODUCTS = (comparability === "numeric")
+    ? PRODUCTS_NUMERIC
+    : PRODUCTS_TEXT;
 
   const container = document.getElementById("stimuliContainer");
   const cls = (condition === "horizontal") ? "stimuliRow" : "stimuliCol";
