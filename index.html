@@ -372,7 +372,7 @@ const PRODUCTS_TEXT = [
   { id: "E", name: "Earbuds E", attrs: ["Moderate battery life", "Moderate charging speed", "Medium weight", "Very strong noise cancelling"] }
 ];
 
-const comparability = (Math.random() < 0.5) ? "numeric" : "text";
+
 const PRODUCTS = (comparability === "numeric") ? PRODUCTS_NUMERIC : PRODUCTS_TEXT;
 
 
@@ -403,7 +403,8 @@ const PRODUCTS = (comparability === "numeric") ? PRODUCTS_NUMERIC : PRODUCTS_TEX
      ***********************/
     const sessionId = (crypto.randomUUID ? crypto.randomUUID() : String(Date.now()) + "_" + Math.random().toString(16).slice(2));
     const condition = "horizontal"; // randomize here (single-link flow) (Math.random() < 0.5) ? "horizontal" : "vertical"
-    
+    const comparability = (Math.random() < 0.5) ? "numeric" : "text";
+
     
 
 
